@@ -7,8 +7,6 @@ import Home from "./Home";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes";
 
-const StyledApp = styled.div``;
-
 const App = () => {
   const [theme, setTheme] = useState("light");
 
@@ -22,7 +20,7 @@ const App = () => {
         <StyledApp>
           <GlobalStyles />
           <Header />
-          <Button onClick={themeToggler}>O</Button>
+          <Button onClick={themeToggler}>🌗</Button>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="" element={<h1>404: Oops!</h1>} />
@@ -36,4 +34,11 @@ const App = () => {
 
 export default App;
 
-const Button = styled.button``;
+const Button = styled.button`
+  width: 50px;
+  right: 10px;
+  top: 10px;
+  position: absolute;
+`;
+
+const StyledApp = styled.div``;

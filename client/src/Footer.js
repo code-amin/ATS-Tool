@@ -1,7 +1,32 @@
-const Footer = () =>{
-return (
-  <div>Footer</div>
-)
-}
+import styled from "styled-components";
+
+const Footer = () => {
+  return (
+    <Wrapper>
+      <Text>ATS-Tool © All rights reserved 2022</Text>
+      <Text>Open Source</Text>
+      <Text>Contact Us</Text>
+      <Text>Donate ☕️</Text>
+      <Text>Privacy Policy</Text>
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.div`
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 70px;
+  border-top: 2px solid gray;
+`;
+
+const Text = styled.div`
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  padding: 20px;
+`;
 
 export default Footer;
