@@ -1,6 +1,6 @@
 // import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
@@ -8,7 +8,12 @@ import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes";
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
+  // Initial theme based on browser preference
+  const themeOnLoad = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+
+  const [theme, setTheme] = useState(themeOnLoad);
 
   const themeToggler = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
@@ -35,7 +40,7 @@ const App = () => {
 export default App;
 
 const Button = styled.button`
-  width: 50px;
+  width: 35px;
   right: 10px;
   top: 10px;
   position: absolute;

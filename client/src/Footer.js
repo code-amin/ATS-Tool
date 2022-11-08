@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
 const Footer = () => {
+  
   return (
     <Wrapper>
       <Text>ATS-Tool © All rights reserved 2022</Text>
-      <Text>Open Source</Text>
-      <Text>Contact Us</Text>
+      <Github href="https://github.com/code-amin/ATS-Tool">
+        Contribute (OpenSource)
+      </Github>
       <Text>Donate ☕️</Text>
       <Text>Privacy Policy</Text>
     </Wrapper>
   );
 };
+
+export default Footer;
 
 const Wrapper = styled.div`
   bottom: 0;
@@ -29,4 +33,11 @@ const Text = styled.div`
   padding: 20px;
 `;
 
-export default Footer;
+const Github = styled.a`
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  padding: 20px;
+`;
+

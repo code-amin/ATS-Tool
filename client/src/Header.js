@@ -11,6 +11,6 @@ const Button = styled.button``;
 
 const HeaderDiv = styled.div`
   border-bottom: 2px solid gray;
-  height: 30px;
+  height: 39px;
   text-align: center;
 `;
