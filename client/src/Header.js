@@ -13,4 +13,5 @@ const HeaderDiv = styled.div`
   border-bottom: 2px solid gray;
   height: 39px;
   text-align: center;
+  font-size:30px;
 `;
