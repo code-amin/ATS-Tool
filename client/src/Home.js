@@ -1,31 +1,48 @@
 import styled from "styled-components";
-import {RiFileCopyLine} from 'react-icons/ri'
+import { RiFileCopyLine } from "react-icons/ri";
 
 const Home = () => {
+  const handleCopy = () => {
+    console.log("copied");
+
+    // navigator.clipboard.writeText(Input.value)
+  };
+  const handleCheck = () => {
+    if (document.getElementById("file").value === "") {
+      console.log("select file");
+    }
+  };
+  const isDisabled = () => {
+    return false;
+  };
+
   return (
     <HomeDiv>
       <UserData>
         Your information{" "}
         <form>
-          <RiFileCopyLine/>
           <Input placeholder="paste your cv here" />
-          or 
+          <h5>or</h5> <h5>Upload resume </h5>
           <input
+            id="file"
             type="file"
             name="document"
             className="form-input"
             accept=".pdf,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           />
-          <button type="submit">Check</button>
+          {/* If no file selected => disabled, if nothing pasted in textbox, error also in right section */}
+          <button type="submit" onClick={handleCheck}>
+            Check
+          </button>
         </form>
       </UserData>
       <CompanyData>
         Job posting information
         <input placeholder="role url"></input>
         or
-        <RiFileCopyLine/>
         <Input placeholder="paste job posting or keywords here" />
       </CompanyData>
+      <RiFileCopyLine onClick={handleCopy} />
     </HomeDiv>
   );
 };
