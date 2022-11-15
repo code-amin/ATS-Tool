@@ -8,7 +8,7 @@ const Footer = () => {
         Contribute (OpenSource)
       </Github>
       <Text>
-        Privacy* no data is stored on our servers, all your data remain yours.
+        Privacy* none of your data is stored on our servers, all your data remains yours.
       </Text>
       <Text>Donate ☕️</Text>
     </Wrapper>

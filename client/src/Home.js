@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {RiFileCopyLine} from 'react-icons/ri'
 
 const Home = () => {
   return (
@@ -6,6 +7,7 @@ const Home = () => {
       <UserData>
         Your information{" "}
         <form>
+          <RiFileCopyLine/>
           <Input placeholder="paste your cv here" />
           or 
           <input
@@ -21,6 +23,7 @@ const Home = () => {
         Job posting information
         <input placeholder="role url"></input>
         or
+        <RiFileCopyLine/>
         <Input placeholder="paste job posting or keywords here" />
       </CompanyData>
     </HomeDiv>
