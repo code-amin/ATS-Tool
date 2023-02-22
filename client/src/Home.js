@@ -4,12 +4,16 @@ import { RiFileCopyLine } from "react-icons/ri";
 const Home = () => {
   const handleCopy = () => {
     console.log("copied");
-
     // navigator.clipboard.writeText(Input.value)
   };
-  const handleCheck = () => {
+
+  const handleCheck = (e) => {
+
     if (document.getElementById("file").value === "") {
-      console.log("select file");
+      console.log("select file",e);
+      
+
+      
     }
   };
   const isDisabled = () => {
@@ -82,5 +86,4 @@ const Input = styled.textarea`
   background-color: #f8f8f8;
   font-size: 14px;
   resize: vertical;
-  placedo
-`;
+`
