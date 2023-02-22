@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { RiFileCopyLine } from "react-icons/ri";
-
+ 
 const Home = () => {
   const handleCopy = () => {
     console.log("copied");
